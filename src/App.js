@@ -1,24 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    /* this is a container of the whole page, this holds up the app*/
-    <div className="container">
-      <h1>Tic Tac Toe </h1>
-        <div className="board">
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-        </div>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    board: Array(9).fill("X")
+  }
+
+
+  render() {
+
+    const Box = this.state.board.map(box => <div className="box">{box}</div>)
+
+    return (
+
+
+      /* this is a container of the whole page, this holds up the app*/
+      <div className="container">
+        <h1>Tic Tac Toe </h1>
+          <div className="board">
+            {Box}
+          </div>
+      </div>
+    );
+  }
+
+
 }
 
 export default App;

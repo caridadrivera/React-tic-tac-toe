@@ -4,7 +4,8 @@ import './App.css';
 class App extends Component {
 
   state = {
-    board: Array(9).fill(null)
+    board: Array(9).fill(null),
+    player: "x"
   }
 
   handleClick(index){

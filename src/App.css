@@ -9,6 +9,15 @@
   border: .08em solid black;
   display: inline-block;
   line-height: 80px;
+  font-size: 60px;
+  font-family: Poppins,sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: rgba(255,255,255, 0.2);
 }
 
 
@@ -16,4 +25,5 @@
   display: inline-flex;
   flex-wrap: wrap;
   width: 320px;
+  margin: 0 auto;
 }

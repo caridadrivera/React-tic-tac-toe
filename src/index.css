@@ -1,4 +1,10 @@
 body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(-21deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

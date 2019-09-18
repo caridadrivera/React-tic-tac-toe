@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
 import Player from './components/choosePlayer';
+import Status from './components/status'
+
+
+
 class App extends Component {
 
   state = {
@@ -37,9 +41,10 @@ class App extends Component {
 
     for (let i = 0; i < winLines.length; i++) {
         const [a, b, c] = winLines[i];
+        let board = this.state.board
 /*if there is a board a(board a is the first filled in index), and board a === board b,  and board a === c */
-        if (this.state.board[a] && this.state.board[a] === this.state.board[b] && this.state.board[a]
-          === this.state.board[c]) {
+        if (board[a] && board[a] === board[b] && board[a]
+          === board[c]) {
           alert('You won');
           this.setState({
             winner: this.state.player
@@ -80,6 +85,7 @@ class App extends Component {
     })
   }
 
+
   render() {
 
     /* with the 9 boxes doing the same thing,
@@ -104,11 +110,10 @@ class App extends Component {
       /* this is a container of the whole page, this holds up the app*/
       <div className="container">
         <h1>Tic Tac Toe </h1>
-          {  this.state.player ? "" : <Player player={(e) => this.setPlayer(e)}/>  }
+          <Status player={this.state.player} setPlayer={(e) => this.setPlayer(e)}  />
           <div className="board">
             {Box}
           </div>
-
       </div>
     );
   }
